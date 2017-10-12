@@ -1,0 +1,79 @@
+
+.navbar-header a {
+	font-size: 2em;
+	font-weight: 700;
+	font-stretch: ultra-expanded;
+	letter-spacing: 0.5rem;
+
+}
+
+.navbar-nav {
+	
+	margin: auto auto auto 3%;
+	border-left: 2px rgba(190, 190, 190, 0.8) solid;
+	border-right: 2px rgba(190, 190, 190, 0.8) solid;
+
+
+}
+.input-group {
+
+	font-size: 150%;
+	margin-left: 200px;
+
+}
+
+.navbar-form div input {
+	font-size: 1.25em;
+	transition: all 0.1s cubic-bezier(.2,.2,.22, 1);
+}
+
+.navbar-form div input:focus {
+	font-size: 1.5em;
+	
+}
+
+.era-row {
+	margin: 5% 5% 5% 5%;
+}
+
+.era-col {
+	border: 1px red black;
+	margin-top: 1% 1% 1% 1%;
+	
+}
+
+
+#community-container {
+	
+	margin: 1%;
+	height: 500px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	text-align: center;
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+}
+}
+
+#community-container:hover {
+	box-shadow: 4px 4px 20px rgba(50, 50, 50, 0.3);
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+}
+
+#friends-container {
+	
+	margin: 1%;
+	height: 500px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	text-align: center;
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+}
+
+#friends-container:hover {
+	box-shadow: 4px 4px 20px rgba(50, 50, 50, 0.3);
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+	
+.grad {
+
+	background: linear-gradient(to bottom , rgba(93, 138, 80, 0.05), rgba(93, 138, 80, 0.01));
+}
