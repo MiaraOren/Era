@@ -4,8 +4,11 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400i|Quicksand:500" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/postHandler.js"></script>	
 
 	<title>
 		Era - Home
@@ -49,14 +52,18 @@
 		<div class="row era-row">
 
 			<div class="col-sm-8 col-md-6 col-lg-6 era-col">
+				<h2>Friends Feed</h2>	
 				<div class="container-fluid grad" id="friends-container">
-					<h2>Friends Feed<h2>
 				</div>
 			</div>
+			
 
 			<div class="col-sm-8 col-md-6 col-lg-6 era-col">
-				<div class="container-fluid grad" id="community-container">
-					<h2>Community Feed<h2>
+				
+				<h2>Community Feed</h2>
+				<div id="hidingScrollBar">
+					<div class="grad hideScrollBar" id="community-container" onmouseover="communityOver()">
+					</div>
 				</div>
 			</div>
 
@@ -65,4 +72,5 @@
 	
 
 </body>
+
 </html>

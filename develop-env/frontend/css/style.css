@@ -4,7 +4,6 @@
 	font-weight: 700;
 	font-stretch: ultra-expanded;
 	letter-spacing: 0.5rem;
-
 }
 
 .navbar-nav {
@@ -33,36 +32,39 @@
 }
 
 .era-row {
-	margin: 5% 5% 5% 5%;
+	margin: 1% 1% 1% 1%;
 }
 
 .era-col {
 	border: 1px red black;
 	margin-top: 1% 1% 1% 1%;
-	
+	text-align: center;
 }
 
 
 #community-container {
-	
+	display: hidden;
+	overflow-y: auto;
 	margin: 1%;
-	height: 500px;
+	width: 100%;
+	height: 600px;
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
+	border-radius: 0px;
 	text-align: center;
-	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
-}
+	 -ms-overflow-style: none;
+	/*transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);*/
 }
 
+
 #community-container:hover {
-	box-shadow: 4px 4px 20px rgba(50, 50, 50, 0.3);
-	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+/*	box-shadow: 4px 4px 20px rgba(50, 50, 50, 0.3);
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);*/
 }
 
 #friends-container {
-	
 	margin: 1%;
-	height: 500px;
+	height: 600px;
+	width: 100%;
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	text-align: center;
@@ -72,8 +74,99 @@
 #friends-container:hover {
 	box-shadow: 4px 4px 20px rgba(50, 50, 50, 0.3);
 	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
-	
-.grad {
+}
 
+#postContainer {
+	width: 100%;
+	margin: 1%;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+}
+
+.grad {
 	background: linear-gradient(to bottom , rgba(93, 138, 80, 0.05), rgba(93, 138, 80, 0.01));
 }
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+hr {
+  	border-width: 2px 0 0 0; 
+  	border-radius: 20px; 
+  	border: 0px;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    margin: 1% auto;
+}
+
+
+div textarea[name=comment] {
+	width: 100%;
+  	border: 0px solid;
+	outline: none;
+	padding: 2%;
+	border-radius: 8px;
+	resize: none;
+}
+
+div textarea[name=comment]:focus {
+	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.4s cubic-bezier(.2,.2,.22, 1);
+}
+
+div div p {
+	float: left;
+	text-align: left;
+
+}
+
+p {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.era-border-left {
+	border-left: 5px #888888 solid;
+	margin-right: 1%;
+	
+}
+
+#era-para-shadow {
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	transition: box-shadow 0.5s cubic-bezier(.2,.2,.22, 1);
+}
+
+
+
+#era-post-row-main {
+	margin: 4% auto;
+}
+
+.era-label {
+	text-shadow: 1px 1px 5px gray, 1px 1px 1px white, 1px 1px 1px black
+	margin-right: auto;
+}
+
+.era-icon {
+	font-size: 1.7rem;
+	text-shadow: 1px 1px 5px gray, 1px 1px 1px white, 1px 1px 1px black
+}
+
+.era-icon:hover {
+	font-size: 2rem;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.era-comment {
+	text-shadow: 1px 1px 5px gray, 1px 1px 1px white, 1px 1px 1px black
+}
+

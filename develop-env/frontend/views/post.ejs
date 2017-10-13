@@ -1,0 +1,83 @@
+<div class="col-sm-12 col-md-12 col-lg-12">
+	<div class="container-fluid grad" id="postContainer">
+
+		<div class="row">
+
+			<div class="col-sm-8 col-md-8 col-lg-8 text-left era-post-row-header">
+		
+				<h4><span>
+					<img src="https://i1.sndcdn.com/avatars-000227553590-jtvvor-t500x500.jpg" class="img-rounded" width="15%" height="15%">
+						Oren Miara <%= counter %>
+						<small>shared a thought</small>
+					</span>
+
+				</h4>
+
+				
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-lg-4 text-right">
+				<h6>
+					<span>
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+					</span>
+					<small>
+						at Thursday 23 November 2049 15:30
+					</small>
+
+			
+				</h6>
+			<i class="fa fa-ellipsis-h fa-2x era-label" aria-hidden="true"></i>
+			</div>
+	
+		</div>
+
+		<hr>
+
+		<div class="row" id="era-post-row-main">
+			<div class="col-sm-1 col-md-1 col-lg-1">
+				<div class="row">
+					<i class="fa fa-tag era-icon" aria-hidden="true"></i>
+				</div>
+				<div class="row">
+					<i class="fa fa-tag era-icon" aria-hidden="true"></i>
+				</div>
+				
+			</div>
+
+			<div class="col-sm-11 col-md-11 col-lg-11">
+				<div class="container-fluid era-border-left" id="era-para-shadow">
+					<p>
+						"Hugh Hefner, the founder of Playboy magazine, has died aged 91 after a lifetime of selling not just magazines but a fantastical lifestyle.
+				 		What did his sexual revolution mean for women?Much of the press coverage of Hefner's death has focused on the two sides to his legacy, pitting
+				 		sleaziness against the way he opened American sexual attitudes.The feminist Camille Paglia called him \"one of the principal architects of the social
+			     		revolution\" and Hefner himself said in 1992 that he was proud
+		     		</p>
+	     		</div>
+			</div>
+
+		</div>
+		<hr>
+		<!-- Bottom Row - functionality : likes, comment, etc -->
+
+		<div class="row align-items-center">
+			<div class="col-sm-1">
+				<i class="fa fa-paper-plane fa-1x era-comment" aria-hidden="true"></i>
+			</div>
+
+			<div class="col-sm-9">
+				<textarea onfocus="assignVisual(<%= counter %>)" id="<%= counter %>" name="comment" form="commentForm" placeholder="Write a comment"></textarea>
+			</div>
+
+			<div class="col-sm-1">
+				<i class="fa fa-thumbs-up era-icon" aria-hidden="true"></i>
+			</div>
+			<div class="col-sm-1">
+				<i class="fa fa-heart-o era-icon" aria-hidden="true"></i>
+			</div>
+			
+		</div>
+
+	</div>
+
+</div>
