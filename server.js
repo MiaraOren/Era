@@ -1,33 +1,99 @@
-var express = require('express');
+var express               = require("express"),
+    mongoose              = require("mongoose"),
+    passport              = require("passport"),
+    bodyParser            = require("body-parser"),
+    User                  = require("./models/user"),
+    LocalStrategy         = require("passport-local"),
+    passportLocalMongoose = require("passport-local-mongoose")
+    
+mongoose.connect('mongodb://localhost/auth', {
+  useMongoClient: true,
+});
+
 var app = express();
-var bodyParser = require('body-parser');
-
-var port = process.env.PORT || 8000;
-var ip = process.env.IP || "0.0.0.0";
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
 app.use("/css", express.static(__dirname + "/develop-env/frontend/css"));
 app.use("/js", express.static(__dirname + "/develop-env/frontend/js"));
-
 app.settings.views = __dirname +'/develop-env/frontend/views/';
 
-var i = 0;
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(require("express-session")({
+    secret: "SDGsdfg464576yhdfh657",
+    resave: false,
+    saveUninitialized: false
+}));
 
-app.get("/", (req, res) => {
-  res.render('home.ejs');
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+//============
+// ROUTES
+//============
+
+
+app.get("/", function(req, res){
+    res.render("welcome");
 });
 
-app.get("/posts", (req, res) => {
-  res.render('post.ejs', {counter: i});
-    i+=1;
+
+app.get("/home", isLoggedIn, function(req, res){
+	// Auth Routes
+	app.use("/home/get_posts", require("./posts"));
+	res.render("home"); 
 });
 
-app.get("/comm_post", (req, res) => {
-	res.json({name: "oren", time: new Date().getTime()});
+
+//show sign up form
+app.get("/register", function(req, res){
+   res.render("register"); 
 });
 
-app.listen(port, ip, function() {
-  console.log("Chat server listening at", ip + ":" + port);
+//handling user sign up
+app.post("/register", function(req, res){
+    User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.render('register');
+        }
+        passport.authenticate("local")(req, res, function(){
+           res.redirect("/home");
+        });
+    });
 });
+
+// LOGIN ROUTES
+//render login form
+app.get("/login", function(req, res){
+   res.render("login"); 
+});
+//login logic
+//middleware
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/home",
+    failureRedirect: "/login"
+}) ,function(req, res){
+
+});
+
+app.get("/logout", function(req, res){
+    req.logout();
+    res.redirect("/");
+});
+
+
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
+
+
+
+app.listen(process.env.PORT || 8080, process.env.IP, function(){
+    console.log("server started.......");
+})

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400i|Quicksand:500" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container-fluid">
+	
+	<div class="jumbotron">
+		<h1>Era</h1>
+		<h2>Sign Up Form</h2>
+		<br>
+		<form class="form-inline" action="/register" method="POST">
+	  		<label class="sr-only" for="inlineFormInput">Name</label>
+	  		<input name="username" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Username">
+
+	  		<label class="sr-only" for="inlineFormInputGroup">Username</label>
+	  	
+	    
+	    	<input name="password" type="password" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+	    	<button type="submit" class="btn btn-primary">Submit</button>
+	    	
+	    	<h4><small>Upload a profile picture</small></h4>
+	    	<label class="custom-file">
+
+  				<input type="file" id="file" class="custom-file-input">
+
+  				<span class="custom-file-control"></span>
+
+			</label>
+
+	  		
+		</form>
+	</div>
+</div>
+</body>
+</html>

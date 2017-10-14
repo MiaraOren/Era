@@ -46,12 +46,12 @@ function communityOver() {
 				
 				$.ajax({
 					type:"get",
-					url:"/posts",
+					url:"/home/get_posts",
 					dataType: 'html',
 					contentType: 'application/html',
-					success: function(data) {
+					success: function(post) {
 						console.log("success");
-						element.append(data);
+						element.append(post);
 						isWaiting = false;
 				 	}
 				});
