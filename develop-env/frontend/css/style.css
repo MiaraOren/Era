@@ -26,21 +26,24 @@
 	transition: all 0.1s cubic-bezier(.2,.2,.22, 1);
 }
 
-.navbar-form div input:focus {
-	font-size: 1.5em;
-	
-}
 
 .era-row {
-	margin: 1% 1% 1% 1%;
+	margin: auto;
+	text-align: center;
+	width: 60%;
 }
 
 .era-col {
 	border: 1px red black;
 	margin-top: 1% 1% 1% 1%;
-	text-align: center;
+	
+	
+	margin: auto;
 }
 
+.container-fluid {
+	margin: auto;
+}
 
 #community-container {
 	display: hidden;

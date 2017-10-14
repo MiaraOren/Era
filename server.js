@@ -43,6 +43,7 @@ app.get("/", function(req, res){
 app.get("/home", isLoggedIn, function(req, res){
 	// Auth Routes
 	app.use("/home/get_posts", require("./posts"));
+	app.use("/home/search-friends", require("./friends"));
 	res.render("home"); 
 });
 
